@@ -18,11 +18,11 @@ Hello! Thank you for taking the time to view this project of mine. Pineapple Exp
 
 # Built With:
 
-*Ruby on Rails
+* Ruby on Rails
 
-*HTML
+* HTML
 
-*CSS/SCSS
+* CSS/SCSS
 
 # Authors
 
