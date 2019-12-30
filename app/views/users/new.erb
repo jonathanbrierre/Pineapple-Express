@@ -1,0 +1,32 @@
+<div class = "holder">
+    <div id = 'sign_up' class = 'flash' style=" width: 500px;">
+        <div>
+            <h1>Sign Up</h1>
+            <%= form_for @user do |f|%>
+                <%= f.label :first_name, "First Name"%><br>
+                <%= f.text_field :first_name%><br>
+                <%= f.label :last_name, "Last Name"%><br>
+                <%= f.text_field :last_name%> <br>
+                <%= f.label :username%><br>
+                <%= f.text_field :username%><br>
+                <%= f.label :password%><br>
+                <%= f.password_field :password%><br> 
+                <%= f.label :password_confirmation, "Confirm Password"%><br>
+                <%= f.password_field :password_confirmation%> <br>
+                <%= f.label :email%><br>
+                <%= f.text_field :email%><br>
+                <%= f.submit class: 'submit'%>
+            <%end%>
+        </div>
+        <% if flash[:notice]%>
+            <% flash[:notice].each do |notice|%>
+                <%=notice%><br>
+            <%end %>    
+        <%end %>
+        <br>
+        <br>
+        <ul id= 'sign_on'>
+            <li class = 'sign_on'><a href = '/home'>Go Back</a></li>
+        </ul>
+    </div>
+</div>

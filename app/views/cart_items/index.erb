@@ -1,0 +1,41 @@
+<%# This is going to be the cart page listing all cart items %>
+
+<%= render "partials/header"%>
+<div class = 'flash' id= 'cart' >
+    <div id = 'cart_head'><h2>Your Cart</h2></div>
+
+    <%if @user_items[0]%>
+        <ul class= 'cart'>
+            <% @user_items.each do |cart_item|%>
+                <div class ='cart' >
+                    <%if cart_item.item.clothing_type == 'pants'%>
+                        <%= image_tag cart_item.item.img_url, class: 'pants_item'%>
+                    <% else %>
+                        <%= image_tag cart_item.item.img_url, class: 'cart_item'%>
+                    <%end%>
+                    <li><a href= "/items/<%=cart_item.item.id%>" class='cart'><%=cart_item.item.name%></a> 
+                    <%=form_for cart_item do |f|%> 
+                        <%=f.label :quantity, "Quantity: "%>
+                        <%=f.number_field :quantity%>
+                        <%=f.hidden_field :id, :value => "#{cart_item.id}"%>
+                        <%=f.submit "Change Quantity", method: :patch%>
+                    <%end%>
+                    <br>
+                    <%= "Size: #{cart_item.size.capitalize}"%>
+                    <p>Price:<span class='cart'> $ <%=cart_item.item.price%></span></p> <br>
+                    Price per Quantity: <span class='cart'> $ <%=cart_item.item.price * cart_item.quantity%></span> 
+                    <%= button_to "Delete", "cart_items/#{cart_item.id}/delete", method: :delete %> </li>
+                    <br>
+                </div>
+            <%end %>
+            <%#vvv Calculates the cart total vvv %>
+            <hr>
+            <p class= 'price'>Total: <span class='cart'>$<%= " #{@user_items.sum do |cart_item| cart_item.item.price * cart_item.quantity end}"%></span></p>
+            <a class= 'checkout' href= '/cart_items/checkout'>Checkout</a>
+        </ul>
+    <%else%>
+        <h3>Your Cart is Empty</h3>
+    <%end%>
+
+
+</div>

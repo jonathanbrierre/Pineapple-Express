@@ -1,0 +1,127 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ /* body {
+    background-image: url(/app/assets/images/t-shirt-pineapple-pixel-art-bit-sleeve-t-shirt.jpg); 
+    background-repeat: repeat-y;
+} */ 
+
+body {
+    font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+    background-image:  url("pine.jpg");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    animation: animatedBackground 40s linear infinite;
+}
+
+.flash{
+    border-style: ridge;
+    border-color: pink;
+    background-color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    
+}
+
+#home{
+    margin: auto;
+}
+
+.holder {
+    transform: translate(0%, 70%)
+}
+
+nav {
+    overflow: hidden;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 99%;
+    z-index:100;
+  }
+
+#logo{
+    float: left;
+    
+}
+#navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position:relative;
+    
+  }
+
+  li.navigation {
+    float: left;
+    position:relative;
+    z-index:100;
+  }
+
+  li.navigation a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li.navigation a:hover {
+    background-color: #111;
+    color: white
+  }
+
+  #sign_on {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li.sign_on a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li.sign_on a:hover {
+    background-color: #111;
+    color: white
+  }
+
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+
+
+.cart_icon{
+  float: right;
+  height:35px;
+  width:35px;
+  padding-right: 100px;
+}
+
+.cart_icon:hover{
+  opacity: .5;
+}
+
+.current_user{
+  position:relative;
+  left: 40px;
+}

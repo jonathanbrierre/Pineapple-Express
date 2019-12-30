@@ -1,0 +1,25 @@
+<nav>
+    <a href= '/items'><img id = 'logo' src= "/assets/site_logo.jpeg"  style = "height: 90px; width 180px;"></a> <br> 
+
+    <%if flash[:notice]%>
+        <%=flash[:notice]%>
+
+    <%end %>
+
+    <br>
+    <ul id="navigation">
+        <li class='navigation'><a href = '/items'> Home</a></li>
+        <li class='navigation'><a href = '/items/shirts'> Shirts</a></li>
+        <li class='navigation'><a href = '/items/pants'> Pants</a></li>
+        <li class='navigation'><a href = '/items/hats'> Hats</a></li>
+        <li class='navigation'><a href = '/history'> Purchase History</a></li>
+        <li class='navigation'><a href = '/logout/destroy'> Log In/Out</a></li>
+        <%if current_user%>
+            <li class = 'current_user'>Logged in as: <%=current_user.first_name + ' ' + current_user.last_name %></li>
+        <%end%>
+    </ul>
+    <a href = '/cart_items'><img src ="/assets/cart.jpeg" class = 'cart_icon' ></a>
+    <br>
+    <br>
+</nav>
+

@@ -1,0 +1,14 @@
+<%= render "partials/header" %>
+<div class = 'flash' style= 'overflow: hidden;'>
+    <div class = 'hat' style= 'margin:0 auto;  background-color: pink; width: 77%;'>
+        <h3 class = 'clothing_type'>Hats</h3>
+        <% @hats.each do |hat|%>
+            <div style ='float: left; width: 300px'>
+                <br>
+                <a href= '/items/<%=hat.id%>'><%=image_tag hat.img_url%></a> <br>
+                <a href="/items/<%=hat.id%>" class= 'item_link'> <%=hat.name%> </a><br>
+                <p style = 'color: green'>$<%= hat.price%></p> <br><hr style = 'border:solid green'>
+            </div>
+        <%end %>
+    </div>
+</div>

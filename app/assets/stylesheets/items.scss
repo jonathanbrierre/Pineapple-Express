@@ -1,0 +1,118 @@
+// Place all the styles related to the Items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.flash {
+    width: 800px;
+}
+
+.review{
+    height:350px; 
+    width:700px;
+    border:2px dashed rgb(62, 219, 0); 
+    overflow:auto;
+    margin: auto;
+    text-align: left;
+}
+#shop {
+    background-color: pink;
+    padding: 0px;
+    height: 80px;
+    
+}
+
+// slideshow
+#slideshow {
+    overflow: hidden;
+    height: 400px;
+    width: 600px;
+    margin: 0 auto;
+    border-style: ridge;
+    border-color: pink;
+    
+  }
+  
+  .slide-wrapper {
+    width: 2400px;
+    animation: slide 20s ease infinite;
+  }
+  
+  .slide {
+    float: left;
+    height: 400px;
+    width: 600px;
+  }
+
+  @keyframes slide {
+    20% {margin-left: 0px;}
+    30% {margin-left: -600px;}
+    50% {margin-left: -600px;}
+    60% {margin-left: -1200px;}
+    70% {margin-left: -1200px;}
+    80% {margin-left: -1800px;}
+    90% {margin-left: -1800px;}
+    
+  }
+
+  // item type pages
+  a.item_link{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+  }
+
+  .item_link:hover {
+    background-color: #111;
+    color: white
+  }
+
+  .clothing_type {
+    font-family: Allura, cursive;
+    font-size: 40px; 
+    color: white;
+  }
+
+
+  // get the 3 pics on the front page to do their thing - opacity, link, text-appear
+  .shop{
+    position: relative;
+    z-index: 0;
+    text-align: center;
+    color: transparent;
+    background-color: pink;
+    top: 2px;
+    
+  }
+  .shop:hover{
+    color:white;
+  }
+
+  .centered{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-family: Allura, cursive;
+  }
+  .something{
+    transform: translate( 0px, 2px);
+  
+  }
+
+  .something:hover{
+    opacity:0;
+    top: 5px;
+    
+  }
+
+  .pines{
+    height: 400px;
+    width: 300px;
+    float: left;
+    padding-left: 60px;
+    padding-bottom: 60px;
+  }

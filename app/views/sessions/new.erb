@@ -1,0 +1,26 @@
+<%# log in page %>
+<div id = 'new_session' class = "holder">
+    <div class = 'flash' style=" width: 500px">
+    <h1>Log In</h1>
+    <br>
+    <% if flash[:notice]%>
+        <%=flash[:notice]%><br><br>
+    <%end %>
+    
+    <%= form_tag '/login' do %>
+        <%= label_tag :username %>
+        <%= text_field_tag :username%>
+        <br>
+        <%= label_tag :password %>
+        <%= password_field_tag :password%>
+        <br>
+        <%= submit_tag 'Login'%>
+    <%end %>
+    <br>
+    <br>
+    <ul id= 'sign_on'>
+        <li class = 'sign_on'><a href = '/home'>Go Back</a></li>
+        <li class = 'sign_on'><a href = '/passwords'>Forgot Password</a></li>
+    </ul>
+    </div>
+</div>

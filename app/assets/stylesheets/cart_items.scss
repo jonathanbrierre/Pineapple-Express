@@ -1,0 +1,66 @@
+// Place all the styles related to the CartItems controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+// edit item pictures and placement
+.pants_item{
+    width:50px;
+    height: 100px;
+
+}
+
+.cart_item{
+    width:100px;
+    height:100px;
+}
+
+ul.cart{
+    list-style-type: none;
+    
+}
+
+div.cart{
+    display: inline-block;
+    border: solid pink;
+    padding: 7px;
+}
+// edits buttons
+a.cart, a.checkout{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+    
+}
+
+a.checkout{
+    padding: 10px;
+}
+
+a.cart:hover, a.checkout:hover {
+    background-color: #111;
+    color: white
+  }
+
+
+  //adds extra padding to offset the random padding on the left
+  #cart{
+    padding-right: 40px;
+}
+
+span.cart{
+    color:green;
+}
+
+#cart_head{
+    margin:0 auto;  
+    width: 77%;  
+    background-color: pink;
+}
+
+#cart_head h2{
+    font-family: Allura, cursive;
+    font-size: 40px; 
+    color: white;
+}

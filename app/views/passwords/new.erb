@@ -1,0 +1,24 @@
+<%= render "partials/header" %>
+
+<div class = 'flash'>
+    <h2>Reset Your Password</h2>
+        <% if flash[:sent]%>
+            <%=flash[:sent]%> <br><br>
+        <%end %>
+        <%if flash[:errors] && flash[:errors].length >=1%>
+            <%flash[:errors].each do |error|%>
+                <p style='color: red'><%=error%></p>
+            <%end %>
+        <%end%>
+    <%= form_for @user, method: :post, url: passwords_reset_path do |f|%>
+        <%= f.label :reset_password_token, 'Reset Code'%>
+        <%= f.number_field :reset_password_token %>
+        <%= f.label :email%>
+        <%= f.text_field :email%> <br>
+        <%= f.label :password_digest, 'Password'%>
+        <%= f.password_field :password_digest%>
+        <%= f.label :password_confirmation%>
+        <%= f.password_field :password_confirmation%> <br>
+        <%= f.submit 'Reset Password'%>
+    <%end %>
+</div>

@@ -1,0 +1,20 @@
+<%= render 'partials/header'%>
+<div class = "holder">
+    <div id = 'home' class = 'flash' style = "width: 400px" >
+
+    <img src= "/assets/welcome_to.jpeg" style = "height: 90px;">
+    <br>
+    <% if flash[:notice]%>
+        <%=flash[:notice]%><br>
+    <%elsif flash[:error] %>
+        <%=flash[:error]%>
+    <%end %>
+    <br>
+    <p>Would you like to log in or sign up?</p>
+    <ul id= 'sign_on'>
+        <li class = 'sign_on'><a href = '/login'>Log In</a></li>
+        <li class = 'sign_on'><a href = '/users/new'>Sign Up</a></li>
+    </ul>
+
+    </div>
+<div>

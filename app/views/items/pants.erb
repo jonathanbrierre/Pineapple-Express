@@ -1,0 +1,15 @@
+<%= render "partials/header" %>
+<div class = 'flash' style= 'overflow: hidden;'>
+    <div class = 'pantalones' style= 'margin:0 auto;  background-color: pink; width: 77%;'>
+        <h3 class ='clothing_type'>Pants</h3>
+        
+        <% @pants.each do |pantalones|%>
+            <div style ='float: left; width: 300px'>
+            <br>
+                <a href= '/items/<%=pantalones.id%>'><%=image_tag pantalones.img_url%></a> <br>
+                <a href="/items/<%=pantalones.id%>" class= 'item_link'> <%=pantalones.name%> </a><br>
+                <p style = 'color: green'>$<%= pantalones.price%></p> <hr style = 'border:solid green'>
+            </div>
+        <%end %>
+    </div>
+</div>

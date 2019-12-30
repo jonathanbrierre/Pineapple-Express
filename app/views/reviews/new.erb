@@ -1,0 +1,27 @@
+<%= render "partials/header" %>
+<div id = "review"class = 'flash'>
+    <div id= 'review_head'><h3>Leave a Review</h3></div>
+    <br>
+        <%if flash[:errors] && flash[:errors].length >=1%>
+            <%flash[:errors].each do |error|%>
+                <p style='color: red'><%=error%></p>
+            <%end %>
+        <%end%>
+    <%= image_tag @item.img_url, class: 'review_img'%> <br>
+    <%= @item.name%>
+    <br>
+    <br>
+    <%= form_for @review do |f|%>
+        <%= f.label :rating, "Rating (1-5)"%>
+        <%= f.number_field :rating%> <br> 
+        <%= f.label :feedback%>
+        <%= f.text_area :feedback%>
+        <% f.label :item_id%>
+        <%= f.hidden_field :item_id, :value => params[:id] %><br>
+        <%=f.submit%>
+    <%end%>
+    <br>
+    <br>
+    <a href= "/history" class ='review_back'>Go Back</a>
+
+</div>

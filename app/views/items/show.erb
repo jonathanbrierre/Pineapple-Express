@@ -1,0 +1,38 @@
+<%= render "/partials/header"%>
+<div class = 'flash' >
+    <h2><%= @item.name%></h2>
+    <%= image_tag @item.img_url%>
+    <h4><%= @item.description%></h4>
+    <h4 style='color:green'>$<%= @item.price%></h4>
+    <br>
+    <br>
+    
+    <%=form_for @cart_item do |f|%>
+        <%=f.label :quantity%>
+        <%=f.number_field :quantity%>
+        <%=f.label :size%>
+        <%=f.select :size, [['small'],['medium'],['large']]%>
+        <%f.label :item_id%>
+        <%=f.hidden_field :item_id, :value => "#{@item.id}" %>
+        <%=f.submit "Add To Cart"%>
+    <%end %>
+    <br>
+    <br>
+        <h3>Reviews:</h3>
+        <% if @item.reviews[0] %>
+    <div class = 'review' >
+            <% @item.reviews.each do |review|%>
+                <h4><%= review.user.first_name + " " + review.user.last_name%> reviewed:</h4>
+                <p><%=review.rating%> out of 5</p><br>
+                <%=review.feedback%>
+                <br>
+                <hr>
+            <%end%>
+    </div>
+        <%else%>
+            <br>
+            <h4>No Reviews Yet!</h4>
+        <%end %>
+</div>
+
+

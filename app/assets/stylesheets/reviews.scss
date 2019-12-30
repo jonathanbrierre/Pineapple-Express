@@ -1,0 +1,64 @@
+// Place all the styles related to the Reviews controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+#review {
+    margin-top: 100px;
+    padding-top: 10px;
+}
+#history{
+    padding-right: 30px;
+}
+.review_item{
+    display: inline-block;
+    padding:10px;
+    color: black;
+    text-decoration: none;
+}
+
+.review_item:hover{
+    border: solid pink;
+}
+
+.review_pants{
+    height: 100px;
+    width: 50px;
+}
+
+.review_image{
+    height: 100px;
+    width: 100px;
+}
+
+.review_link{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#review_head{
+    margin:0 auto;  
+    width: 77%;  
+    background-color: pink;
+}
+
+#review_head h3{
+    font-family: Allura, cursive;
+    font-size: 40px; 
+    color: white;
+}
+
+.review_back{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.review_back:hover{
+    background-color: #111;
+    color: white
+}

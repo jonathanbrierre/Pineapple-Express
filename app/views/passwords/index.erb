@@ -1,0 +1,10 @@
+<%= render "partials/header" %>
+
+<div class = 'flash'>
+    <h2> Forgot password? <br> Input your email</h2>
+    <%= form_with scope: :post, url: passwords_forgot_path do |form|%>
+        <%= form.label :email%>
+        <%= form.text_field :email %>
+        <%= form.submit 'Submit'%>
+    <%end%>
+</div>

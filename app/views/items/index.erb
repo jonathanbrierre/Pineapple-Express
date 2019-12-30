@@ -1,0 +1,46 @@
+<%= render "partials/header" %>
+<div class = 'flash' style= 'overflow: hidden;'>
+    <div style="background-color: pink;">
+    <h2 style="text-align: left;">Because it's more than just <p style='color: white; font-family: Allura, cursive; font-size: 50px; line-height:.7;'>a fruit...</p></h2></div>
+    <div id="slideshow">
+        <div class="slide-wrapper">
+            <div class="slide"><%=image_tag "beach_pine.jpeg"%></div>
+            <div class="slide"><%=image_tag "lady_pine.jpeg"%></div>
+            <div class="slide"><%=image_tag "sky_pine.jpeg"%></div>
+            <div class="slide"><%=image_tag "pink_pine.png"%></div>
+        </div>
+    </div>
+    <br>
+    <div id= "shop">
+        <div style='float: left'><h2 style= 'text-align: left;' >Shop</h2></div>
+        <div style='float: left'><h2 style= 'color: white; font-family: Allura, cursive; font-size: 43px;' > for style!</h2></div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div style= 'margin:0 auto; width: 75%; display: inline-block'>
+        <div class = "shop" style ='float: left;'>
+            <p class= 'centered'>Shop Shirts</p>
+            <a href= '/items/shirts'><%=image_tag 'items/home-options/home-shirt.jpeg', class: 'something'%></a>
+        </div>
+        <div class = "shop" style ='float: left;'>
+            <p class= 'centered'>Shop Pants</p>
+            <a href= '/items/pants'><%=image_tag 'items/home-options/home_pants.jpeg', class: 'something' %> </a>
+        </div>
+        <div class = "shop" style ='float: left;'>
+            <p class= 'centered'>Shop Hats</p>
+            <a href= '/items/hats'><%=image_tag 'items/home-options/home_hat.jpeg', class: 'something'%> </a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div >
+
+        <%= image_tag 'items/home-options/leaves.jpeg', class: "pines" %>
+        <div style='border:dashed pink; display: inline-block; width: 50%; transform: translate(0px, 70px) ' ><p style= 'line-height: 40px;'>So we heard that you are a cool person. We also heard that you heard that 🍍🍍🍍🍍🍍 are <em style='color:pink;'>by far</em> the coolest fruit! Could it be a coincidence that a cool person like you found a cool site like this featuring the coolest fruit? <b style='color:pink'>We think not!</b> </p></div>
+    </div>
+
+
+
+</div>
