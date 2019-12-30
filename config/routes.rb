@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   get '/items/shirts', to: 'items#shirts'
   get '/items/pants', to: 'items#pants'
   get '/items/hats', to: 'items#hats'
-
+  get '/about', to: 'items#about'
+  
   delete '/cart_items/:id/delete', to: "cart_items#destroy", as: 'remove'
   get '/cart_items/checkout', to: "cart_items#checkout", as: 'checkout'
 

@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-    skip_before_action :authorized, only:[:index, :show, :shirts, :pants, :hats]
+    skip_before_action :authorized, only:[:index, :show, :shirts, :pants, :hats, :about]
 
     def index
         @items = Item.all
@@ -8,9 +8,9 @@ class ItemsController < ApplicationController
     def show
         @item = Item.find(params[:id])
         @cart_item = CartItem.new
-        
+    end
 
-
+    def about
     end
 
     def shirts
