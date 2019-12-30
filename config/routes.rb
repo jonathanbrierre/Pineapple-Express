@@ -24,10 +24,10 @@ Rails.application.routes.draw do
   post 'passwords/reset', to: 'passwords#reset'
   
   
-  resources :reviews 
-  resources :cart_items
-  resources :items
-  resources :users
-  resources :passwords 
+  resources :reviews, only: [:new, :create]
+  resources :cart_items, only: [:index, :new, :create, :update]
+  resources :items, only: [:index, :show]
+  resources :users, only: [:new, :create]
+  resources :passwords, only: [:index, :new]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
