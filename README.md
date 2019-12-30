@@ -12,7 +12,7 @@ Hello! Thank you for taking the time to view this project of mine. Pineapple Exp
 
 * After the above 3 steps are complete, you can start your rails server using the command, `rails s`. 
 
-* Once the server is running ( give it a few moment - maybe 7.23 seconds), access the store home page by typing `localhost:3000` into the URL bar in your browser.
+* Once the server is running ( give it a few moments - maybe 7.23 seconds), access the store home page by typing `localhost:3000` into the URL bar in your browser.
 
 * Buy all the things!
 
