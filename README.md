@@ -1,24 +1,29 @@
-# README
+# Pineapple Express
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hello! Thank you for taking the time to view this project of mine. Pineapple Express is a store designed for demo purposes ONLY! It is in no way meant to sell actual products. It is also in no way related to the movie 'Pineapple Express,' or the apparel store, EXPRESS (don't sue me 🥰). It is a store front designed to simulate the online shopping process whilst also showcasing different CSS and SCSS mechanics. 
 
-Things you may want to cover:
+# Getting Started
 
-* Ruby version
+* Run `bundle install` on your computer to install the necesary ruby gems.
 
-* System dependencies
+* Run `rails db:migrate` to run the migration files and set up your database.
 
-* Configuration
+* Run `rails db:seed` to seed the database with the store items (because what's a store without any items!?).
 
-* Database creation
+* After the above 3 steps are complete, you can start your rails server using the command, `rails s`. 
 
-* Database initialization
+* Once the server is running ( give it a few moment - maybe 7.23 seconds), access the store home page by typing `localhost:3000` into the URL bar in your browser.
 
-* How to run the test suite
+* Buy all the things!
 
-* Services (job queues, cache servers, search engines, etc.)
+# Built With:
 
-* Deployment instructions
+*Ruby on Rails
 
-* ...
+*HTML
+
+*CSS/SCSS
+
+# Authors
+
+* me(Jonathan Brierre)
