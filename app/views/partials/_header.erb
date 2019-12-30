@@ -1,10 +1,11 @@
 <nav>
     <a href= '/items'><img id = 'logo' src= "/assets/site_logo.jpeg" ></a> <br> 
-
+    <div class='nav_notice'>
     <%if flash[:notice]%>
-        <%=flash[:notice]%>
+        <%=flash[:notice]  %>
 
     <%end %>
+    </div>
 
     <br>
     <ul id="navigation">

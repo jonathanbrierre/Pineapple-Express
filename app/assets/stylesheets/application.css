@@ -93,6 +93,10 @@ nav {
     color: white
   }
 
+  .nav_notice{
+    color:red
+  }
+
   #sign_on {
     list-style-type: none;
     margin: 0;
