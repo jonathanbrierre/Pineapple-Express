@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-    skip_before_action :authorized, only:[:index, :show, :shirts, :pants, :hats, :about]
+    skip_before_action :authorized, only:[:index, :shirts, :pants, :hats, :about]
 
     def index
         @items = Item.all
