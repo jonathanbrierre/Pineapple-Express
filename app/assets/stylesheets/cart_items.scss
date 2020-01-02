@@ -27,11 +27,12 @@ div.cart{
 // edits buttons
 a.cart, a.checkout{
     display: block;
-    color: black;
     text-align: center;
     padding: 5px 10px;
     text-decoration: none;
-    
+}
+a.cart{
+    color:rgb(245, 133, 152);
 }
 
 a.checkout{

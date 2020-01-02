@@ -13,7 +13,7 @@
                     <% else %>
                         <%= image_tag cart_item.item.img_url, class: 'cart_item'%>
                     <%end%>
-                    <li><a href= "/items/<%=cart_item.item.id%>" class='cart'><%=cart_item.item.name%></a> 
+                    <li><a href= "/items/<%=cart_item.item.id%>" class='cart'><%=cart_item.item.name%></a>
                     <%=form_for cart_item do |f|%> 
                         <%=f.label :quantity, "Quantity: "%>
                         <%=f.number_field :quantity%>
