@@ -3,10 +3,11 @@
     <div class = 'flash' style=" width: 500px">
     <h1>Log In</h1>
     <br>
+    <div class = 'notice'>
     <% if flash[:notice]%>
         <%=flash[:notice]%><br><br>
     <%end %>
-    
+    </div>
     <%= form_tag '/login' do %>
         <%= label_tag :username %>
         <%= text_field_tag :username%>

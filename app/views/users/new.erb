@@ -18,11 +18,13 @@
                 <%= f.submit class: 'submit'%>
             <%end%>
         </div>
+        <div class = 'notice'>
         <% if flash[:notice]%>
             <% flash[:notice].each do |notice|%>
                 <%=notice%><br>
             <%end %>    
         <%end %>
+        </div>
         <br>
         <br>
         <ul id= 'sign_on'>
