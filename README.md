@@ -22,7 +22,7 @@ Hello! Thank you for taking the time to view this project of mine. Pineapple Exp
 
 * HTML
 
-* CSS/SCSS
+* CSS
 
 # Authors
 
