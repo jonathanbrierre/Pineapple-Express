@@ -89,10 +89,12 @@ nav {
     text-decoration: none;
   }
 
-  li.navigation a:hover {
+  li.navigation:hover, li.navigation a:hover{
     background-color: #111;
-    color: white
+    color: white;
   }
+
+
 
   .nav_notice{
     color:red
